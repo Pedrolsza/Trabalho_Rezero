@@ -5,38 +5,38 @@
 
 /* Ajuste no tamanho da logo dentro da navbar */
 .navbar-brand img {
-    max-width: 120px; /* Define um limite máximo para a logo */
-    height: auto; /* Mantém a proporção */
+    max-width: 120px;
+    height: auto;
     display: block;
 }
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
 
-.character-carousel {
+/* Estilo do carrossel */
+#carouselPersonagens {
+    margin-top: 20px;
     display: flex;
-    gap: 20px; 
-    justify-content: flex-start; 
-}
-.character {
-    width: 200px; 
-    height: 400px;
-    flex-shrink: 0; 
+    justify-content: flex-start; /* Move o carrossel para a esquerda */
 }
 
-.character img {
+/* Ajuste no tamanho das imagens e organização */
+.character-card {
+    width: 150px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.character-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    border-radius: 10px;
+    object-fit: cover; /* Ajusta sem deixar bordas pretas */
 }
 
-.character:hover img {
+.character-card:hover img {
     transform: scale(1.05);
 }
 
+/* Sinopse oculta e revelada ao passar o mouse */
 .character-info {
     position: absolute;
     bottom: 0;
@@ -44,31 +44,18 @@
     right: 0;
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 10px;
+    padding: 15px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
 }
 
-.character:hover .character-info {
+.character-card:hover .character-info {
     opacity: 1;
 }
 
-.arrow {
-    position: absolute;
-    top: 50%;
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow {
-    right: 10px;
+/* Ajuste nas setas do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
 }

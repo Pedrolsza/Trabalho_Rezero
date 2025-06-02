@@ -42,36 +42,63 @@
 
     <!-- Seção Personagens -->
     <section id="personagens" class="container mt-5">
-    <h2>Personagens Principais</h2>
-    <div class="carousel-container">
-        <div class="character-carousel">
-            <div class="character">
-                <img src="img/Subaru_Personagem.webp" alt="Subaru Natsuki">
-                <div class="character-info">
-                    <h3>Subaru Natsuki</h3>
-                    <p>O protagonista que usa sua habilidade de retornar da morte para enfrentar desafios aterrorizantes.</p>
-                </div>
-            </div>
-            <div class="character">
-                <img src="img/Emilia_Personagem.webp" alt="Emilia">
-                <div class="character-info">
-                    <h3>Emilia</h3>
-                    <p>Uma meio-elfa gentil e poderosa que luta para conquistar seu lugar como governante de Lugunica.</p>
-                </div>
-            </div>
-            <div class="character">
-                <img src="img/Rem_Personagem.jpg" alt="Rem">
-                <div class="character-info">
-                    <h3>Rem</h3>
-                    <p>A guerreira leal que desenvolve um profundo laço com Subaru, sendo uma das personagens favoritas dos fãs.</p>
+    <h2 class="text-start mb-3">Personagens Principais</h2>
+    <div id="carouselPersonagens" class="carousel slide ms-auto" data-bs-ride="carousel"> <!-- Corrigindo alinhamento -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex flex-wrap gap-3 justify-content-start"> <!-- Agora os personagens vão para o lado esquerdo -->
+                    <div class="card character-card">
+                        <img src="img/Subaru_Personagem.webp" class="card-img img-fluid" alt="Subaru Natsuki">
+                        <div class="card-img-overlay character-info">
+                            <h5 class="card-title">Subaru Natsuki</h5>
+                            <p class="card-text">O protagonista que usa sua habilidade de retornar da morte para enfrentar desafios aterrorizantes.</p>
+                        </div>
+                    </div>
+                    <div class="card character-card">
+                        <img src="img/Emilia_Personagem.webp" class="card-img img-fluid" alt="Emilia">
+                        <div class="card-img-overlay character-info">
+                            <h5 class="card-title">Emilia</h5>
+                            <p class="card-text">Uma meio-elfa gentil e poderosa que luta para conquistar seu lugar como governante de Lugunica.</p>
+                        </div>
+                    </div>
+                    <div class="card character-card">
+                        <img src="img/Rem_Personagem.jpg" class="card-img img-fluid" alt="Rem">
+                        <div class="card-img-overlay character-info">
+                            <h5 class="card-title">Rem</h5>
+                            <p class="card-text">A guerreira leal que desenvolve um profundo laço com Subaru, sendo uma das personagens favoritas dos fãs.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="arrow left-arrow">&lt;</button>
-        <button class="arrow right-arrow">&gt;</button>
+        <!-- Botões de navegação -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 </section>
 
+            <!-- Botões de navegação -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+        <!-- Botões de navegação -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
 
     <!-- Seção Curiosidades -->
     <section id="curiosidades" class="container mt-5">
