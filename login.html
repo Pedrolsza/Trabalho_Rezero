@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Login - Re:Zero Wiki</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <!-- Áudio do renascimento -->
+    <audio id="renascimento-audio" src="audio/re-zero-return-by-death (mp3cut.net).mp3"></audio>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h2 class="title">Está pronto para viajar para outro mundo?</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Usuário" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-login">Re:Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script para os efeitos -->
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Verifica se os campos estão preenchidos
+            let usuario = document.querySelector("input[placeholder='Usuário']").value;
+            let senha = document.querySelector("input[placeholder='Senha']").value;
+
+            if (usuario === "" || senha === "") {
+                alert("Preencha os campos de login!");
+                return;
+            }
+
+            // Marca que o usuário fez login
+            localStorage.setItem("usuarioLogado", "true");
+
+            // Toca o som do renascimento
+            let audio = document.getElementById("renascimento-audio");
+            audio.play().catch(error => console.log("Erro ao tocar áudio:", error));
+
+            // Animação para escurecimento da tela
+            document.body.style.transition = "opacity 2s ease-in-out";
+            document.body.style.opacity = "0";
+
+            // Redireciona após a animação
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
