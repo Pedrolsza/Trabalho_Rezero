@@ -1,13 +1,13 @@
 /* Ajuste na barra de navegação */
-.navbar {
-    padding: 10px 0;
-}
-
-/* Ajuste no tamanho da logo dentro da navbar */
 .navbar-brand img {
+    display: block;
     max-width: 120px;
     height: auto;
     display: block;
+}
+
+body {
+  padding-top: 50px; 
 }
 
 /* Estilo do carrossel */
@@ -19,7 +19,7 @@
 
 /* Ajuste no tamanho das imagens e organização */
 .character-card {
-    width: 150px;
+    width: 147px;
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
@@ -54,8 +54,20 @@
     opacity: 1;
 }
 
-/* Ajuste nas setas do carrossel */
 .carousel-control-prev,
 .carousel-control-next {
     width: 40px;
+}
+
+.accordion-button {
+    background-color: #222222 !important; /* Troca o fundo azul por um cinza escuro */
+    color: #fff !important; /* Ajusta a cor do texto para branco */
+}
+
+.accordion-body img {
+    width: 100%; /* A imagem ocupará toda a largura disponível */
+    max-width: 500px; /* Ajuste para um tamanho adequado */
+    height: auto; /* Mantém a proporção original */
+    display: block; /* Garante que ela fique abaixo do texto */
+    margin: 10px auto; /* Centraliza a imagem e dá espaço ao redor */
 }

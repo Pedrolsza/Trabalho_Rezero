@@ -9,7 +9,6 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100">
-    <!-- Áudio do renascimento -->
     <audio id="renascimento-audio" src="audio/re-zero-return-by-death (mp3cut.net).mp3"></audio>
 
     <div class="login-container">
@@ -41,16 +40,9 @@
                 return;
             }
 
-            // Marca que o usuário fez login
-            localStorage.setItem("usuarioLogado", "true");
-
             // Toca o som do renascimento
             let audio = document.getElementById("renascimento-audio");
             audio.play().catch(error => console.log("Erro ao tocar áudio:", error));
-
-            // Animação para escurecimento da tela
-            document.body.style.transition = "opacity 2s ease-in-out";
-            document.body.style.opacity = "0";
 
             // Redireciona após a animação
             setTimeout(() => {
