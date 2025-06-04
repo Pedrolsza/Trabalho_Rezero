@@ -39,7 +39,7 @@
         <p>Subaru Natsuki, um jovem comum, é inesperadamente transportado para um mundo de fantasia repleto de magia e intrigas. Porém, ao invés de ser recebido como um herói, ele rapidamente descobre sua terrível maldição: cada vez que morre, retorna no tempo, revivendo os eventos com a lembrança intacta do que aconteceu. Preso em um ciclo cruel de dor e sofrimento, ele deve usar sua habilidade para desvendar mistérios, enfrentar inimigos aterrorizantes e proteger aqueles que ama. Em meio a traições, batalhas e desafios psicológicos intensos, Subaru percebe que, mais do que força, precisa de determinação, inteligência e aliados fiéis para sobreviver e mudar seu destino.</p>
         <img src="img/rezero_homepage.avif" class="img-fluid rounded" alt="Cena de Re:Zero">
     </section>
-
+    <!-- Seção Personagens -->
     <section id="personagens" class="container mt-5">
     <h2 class="text-start mb-3">Personagens Principais</h2>
     <div id="carouselPersonagens" class="carousel slide ms-auto"> 
@@ -355,7 +355,6 @@
                 </div>
             </div>
             
-        <!-- Botões de navegação -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
@@ -364,7 +363,6 @@
         </button>
     </div>
 </section>
-            <!-- Botões de navegação -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
@@ -373,7 +371,6 @@
             </button>
         </div>
     </section>
-        <!-- Botões de navegação -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonagens" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
@@ -480,22 +477,19 @@
 </section>
 
 
-    <!-- Botão para abrir a experiência interativa -->
 <button type="button" class="btn btn-warning" id="curiosoBtn">
     O maior 𝓜𝓲𝓼𝓽𝓮́𝓻𝓲𝓸 da obra.
-
 </button>
 
-<!-- Modal que aparece quando o usuário clica no botão -->
-<div class="modal fade" id="modalCuriosidade" tabindex="-1">
+<div class="modal fade" id="modalCuriosidade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Mistério Revelado!</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" id="fecharModal"></button>
             </div>
             <div class="modal-body text-center">
-                <h4>A ganância te matou Echidna está feliz... Recomece do ZERO.</h4>
+                <h4>A ganância te matou... Echidna está feliz... Recomece do ZERO.</h4>
                 <audio id="somCuriosidade">
                     <source src="audio/return_by_death (mp3cut.net).mp3" type="audio/mpeg">
                 </audio>
@@ -509,23 +503,40 @@
     </div>
 </div>
 
-<!-- JavaScript para controlar os eventos -->
 <script>
     document.getElementById("curiosoBtn").addEventListener("click", function() {
         document.getElementById("somCuriosidade").play(); 
+
         setTimeout(() => {
             var modalCuriosidade = new bootstrap.Modal(document.getElementById("modalCuriosidade"));
             modalCuriosidade.show(); 
         }, 500); 
     });
 
+    document.getElementById("fecharModal").addEventListener("click", function(event) {
+        event.preventDefault(); 
+        let modalDialog = document.querySelector("#modalCuriosidade .modal-dialog");
+
+        let randomX = Math.floor(Math.random() * 40) + 10; 
+        let randomY = Math.floor(Math.random() * 40) + 10; 
+
+        modalDialog.style.position = "absolute";
+        modalDialog.style.top = randomY + "%";
+        modalDialog.style.left = randomX + "%";
+    });
+
     document.getElementById("reviverBtn").addEventListener("click", function() {
         document.getElementById("somReviver").play(); 
+
+        document.body.style.transition = "opacity 1.5s ease-in-out";
+        document.body.style.opacity = "0";
+
         setTimeout(() => {
-            window.location.href = "login.html";gin
-        }, 1500); 
+            window.location.href = "login.html";
+        }, 1500);
     });
 </script>
+
 
 
     <!-- Seção Trilha Sonora -->
@@ -546,7 +557,6 @@
         </li>
     </ul>
 
-    <!-- Conteúdo das abas -->
     <div class="tab-content mt-3">
         <!-- Openings -->
         <div class="tab-pane fade show active" id="openings">
@@ -588,6 +598,17 @@
     <!-- Seção IFs (Finais Alternativos) -->
 <section id="ifs" class="container mt-5">
     <h2>Finais Alternativos ("IFs")</h2>
+
+    <!-- Explicação sobre os IFs -->
+    <p>
+        Na história de <strong>Re:Zero</strong>, os finais alternativos conhecidos como <strong>"IFs"</strong> exploram diferentes caminhos que Subaru poderia ter seguido, caso suas escolhas fossem influenciadas por emoções extremas ou aspectos sombrios de sua personalidade.  
+        Esses finais mostram versões **alternativas** de seu destino, trazendo consequências trágicas ou radicais que divergem da linha principal da narrativa.  
+    </p>
+
+    <p>
+        Cada IF está associado a um dos <strong>Sete Pecados Capitais</strong>, refletindo como Subaru poderia ter sido corrompido por cada um desses aspectos.  
+        Aqui estão alguns desses cenários alternativos, revelando mundos onde ele toma decisões drásticas que afetam profundamente sua jornada.  
+    </p>
     <div class="accordion" id="ifsAccordion">
 
         <!-- IF da Preguiça -->
@@ -717,7 +738,6 @@
         </div>
     </div>
 </section>
-
 
     <!-- Footer -->
     <footer class="text-center mt-5">

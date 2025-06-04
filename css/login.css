@@ -1,7 +1,6 @@
-/* Estilos gerais */
 body {
     font-family: 'Barlow', sans-serif;
-    background-image: url("../img/tela-site.jpg"); /* Wallpaper de Re:Zero */
+    background-image: url("../img/tela-site.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -11,7 +10,6 @@ body {
     height: 100vh;
 }
 
-/* Container central */
 .login-container {
     display: flex;
     justify-content: center;
@@ -19,24 +17,21 @@ body {
     width: 100%;
 }
 
-/* Card de login com efeito translúcido */
 .login-card {
-    background: rgba(0, 0, 0, 0.6); /* Transparência */
+    background: rgba(0, 0, 0, 0.6); 
     padding: 55px;
     border-radius: 15px;
     text-align: center;
     width: 450px;
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    backdrop-filter: blur(10px); 
 }
 
-/* Título */
 .title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Inputs */
 .input-group {
     margin-bottom: 15px;
 }
@@ -50,7 +45,6 @@ body {
     color: white;
 }
 
-/* Botão */
 .btn-login {
     width: 100%;
     padding: 10px;

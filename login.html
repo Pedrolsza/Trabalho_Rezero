@@ -31,7 +31,6 @@
         document.getElementById("login-form").addEventListener("submit", function(event) {
             event.preventDefault();
 
-            // Verifica se os campos estão preenchidos
             let usuario = document.querySelector("input[placeholder='Usuário']").value;
             let senha = document.querySelector("input[placeholder='Senha']").value;
 
@@ -40,11 +39,9 @@
                 return;
             }
 
-            // Toca o som do renascimento
             let audio = document.getElementById("renascimento-audio");
             audio.play().catch(error => console.log("Erro ao tocar áudio:", error));
 
-            // Redireciona após a animação
             setTimeout(() => {
                 window.location.href = "index.html";
             }, 2000);
